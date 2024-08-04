@@ -1,7 +1,3 @@
-const sumAll = function() {
-
-};
-
 function range(num1,num2) {
   let array = [];
   for (let i = num1; i <= num2; ++i) {
@@ -18,7 +14,11 @@ function sum(array) {
   return total;
 }
 
-console.log(sum(range(1,5)));
+const sumAll = function(arg1,arg2) {
+  return sum(range(arg1,arg2));
+};
+
+console.log(sumAll(1,5));
 
 // Do not edit below this line
 module.exports = sumAll;
