@@ -1,7 +1,13 @@
 function range(num1,num2) {
   let array = [];
-  for (let i = num1; i <= num2; ++i) {
-    array.push(i);
+  if (num1 < num2) {
+    for (let i = num1; i <= num2; ++i) {
+      array.push(i);
+    }
+  } else {
+    for (let j = num2; j <= num1; ++j) {
+      array.push(j);
+    }
   }
   return array;
 };
@@ -15,10 +21,12 @@ function sum(array) {
 }
 
 const sumAll = function(arg1,arg2) {
-  return sum(range(arg1,arg2));
+  if (Number.isInteger(arg1) && arg1 > 0 && Number.isInteger(arg2) && arg2 > 0) {
+    return sum(range(arg1,arg2));
+  } else {
+    return "ERROR";
+  }
 };
-
-console.log(sumAll(1,5));
 
 // Do not edit below this line
 module.exports = sumAll;
