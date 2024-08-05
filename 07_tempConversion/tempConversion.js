@@ -1,9 +1,11 @@
 const convertToCelsius = function(temperature) {
-  return   (temperature - 32) * (5/9)
+  let celsius = (temperature - 32) * (5/9);
+  return Math.round(celsius*10)/10;
 };
 
 const convertToFahrenheit = function(temperature) {
-  return  ((temperature * (9/5)) + 32)
+  let fahrenheit = ((temperature * (9/5)) + 32);
+  return Math.round(fahrenheit*10)/10;
 };
 
 // Do not edit below this line
