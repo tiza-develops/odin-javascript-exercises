@@ -1,5 +1,5 @@
-const add = function() {
-	
+const add = function(summand1, summand2) {
+	return summand1 + summand2;
 };
 
 const subtract = function() {
